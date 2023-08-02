@@ -1,0 +1,14 @@
+name: "bad workflow"
+on:
+  issues:
+    types: [opened]
+description: "insecure and useless"
+branding:
+  icon: box
+  color: blue
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        echo github.event.issue.body > issues.txt
