@@ -10,7 +10,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Print issue body
-      run: echo ${{ github.event.issue.body }} > issues.txt
+      run: echo "${{ github.event.issue.body }}" > issues.txt
       env:
         MY_API_KEY: ${{secrets.MY_API_KEY}}
       shell: bash
